@@ -1,84 +1,130 @@
-# EP2 - Object-Oriented Circuit Simulation Project
+# C++ Circuit Simulator – OOP Academic Project @ Poli-USP (2023)
 
-This repository showcases a university lab project developed in C++ using **Object-Oriented Programming (OOP) principles**. The project simulates various electronic circuit modules and their interconnections, demonstrating core software engineering practices for modular design, reusability, and robust system architecture.
-
-This project highlights a practical application of theoretical concepts in software development, focusing on how real-world problems can be abstracted and solved using object-oriented paradigms.
+> 📘 **Academic Project – C++ Circuit Simulator | Poli-USP, 2023**  
+> Developed as part of the Object-Oriented Programming (OOP) course in Electrical Engineering at the Polytechnic School of the University of São Paulo (Poli-USP).  
+> Demonstrates strong software architecture, modular C++ design, and abstraction of engineering problems — aligned with expectations for internships in software development, signal processing, and telecommunications.
 
 ---
 
 ## 🚀 Project Overview
 
-The primary goal of this project was to model and simulate the behavior of different circuit components (such as amplifiers, integrators, differentiators, and adders) and their complex interconnections (series, parallel, feedback loops). It processes input signals through these simulated circuits and can potentially output results for analysis.
+This project simulates electronic circuits through a fully modular and extensible **object-oriented architecture** written in C++. It models core components (e.g., amplifiers, integrators, differentiators) and their interconnections (series, parallel, feedback), processing input signals and simulating the resulting behavior.
 
-This project highlights a practical application of theoretical concepts in software development, focusing on how real-world problems can be abstracted and solved using object-oriented paradigms.
+The project bridges theoretical knowledge in Electrical Engineering and practical software engineering, showcasing the abstraction of real-world problems through OOP.
 
 ---
 
 ## ✨ Key Features & Concepts Demonstrated
 
-* **Object-Oriented Design (OOD):** Extensive use of **classes, objects, encapsulation, inheritance, and polymorphism** to model circuit components (`Module` hierarchy) and circuit structures (`Circuito` hierarchy).
-* **Modularity & Reusability:** Designing individual circuit modules as distinct, reusable components that can be combined to form complex circuits.
-* **Polymorphism:** Utilizing **virtual functions** and **abstract classes** (e.g., `Modulo`, `Circuito`) to allow different types of modules and circuits to be handled uniformly.
-* **Composition:** Building complex circuits (e.g., `ModuloEmSerie`, `ModuloEmParalelo`, `ModuloRealimentado`) by composing simpler modules.
-* **Data Structures & Algorithms:** Handling and processing signals, managing lists of modules, and performing calculations based on circuit topology.
-* **Input/Output Handling:** Reading configuration from files and potentially generating graphical output (`Grafico`).
-* **Persistence:** Implementing **data persistence** for modules (`PersistenciaDeModulo`) to save and load circuit configurations.
-* **User Interface (CLI):** A **command-line interface** (`menu.cpp`, `main.cpp`) for interacting with the simulation.
+* **Object-Oriented Design:** Robust use of encapsulation, inheritance, polymorphism, and composition to build a flexible system.
+* **Modularity & Reusability:** Circuit components implemented as standalone modules that can be combined in series, parallel, or feedback configurations.
+* **Abstract Hierarchies:** `Modulo` and `Circuito` abstract classes allow consistent handling of components and structures.
+* **Signal Processing:** Input signal transformation through simulated systems.
+* **Persistence:** Save/load capabilities for module configurations using file I/O (`PersistenciaDeModulo`).
+* **Command-Line Interface:** Interactive interface implemented in `menu.cpp` and `main.cpp` for running simulations.
+* **Scalability:** Clean architecture facilitates future additions like new components or UI layers.
 
 ---
 
 ## 🛠️ Technical Stack
 
-* **Language:** C++ (using C++11 standard)
+* **Language:** C++ (C++11 standard)
 * **Compiler:** g++
 * **Build System:** Makefile
 
 ---
 
+## 📂 Project Structure
+
+```
+.
+├── Amplificador.cpp
+├── Amplificador.h
+├── Circuito.cpp
+├── Circuito.h
+├── CircuitoMISO.cpp
+├── CircuitoMISO.h
+├── CircuitoSISO.cpp
+├── CircuitoSISO.h
+├── Derivador.cpp
+├── Derivador.h
+├── Grafico.cpp
+├── Grafico.h
+├── Integrador.cpp
+├── Integrador.h
+├── main.cpp
+├── menu.cpp
+├── Modulo.cpp
+├── Modulo.h
+├── ModuloEmParalelo.cpp
+├── ModuloEmParalelo.h
+├── ModuloEmSerie.cpp
+├── ModuloEmSerie.h
+├── ModuloRealimentado.cpp
+├── ModuloRealimentado.h
+├── PersistenciaDeModulo.cpp
+├── PersistenciaDeModulo.h
+├── Sinal.cpp
+└── Sinal.h
+```
+
+---
+
 ## ⚙️ How to Compile and Run
 
-To compile this project, navigate to the `cpp-oop-circuit-simulator` directory in your terminal and use the provided `Makefile`.
+1. **Navigate to the project directory:**
+   ```bash
+   cd Ep2
+   ```
 
-1.  **Navigate to the project directory:**
-    ```bash
-    cd cpp-oop-circuit-simulator
-    ```
+2. **Compile the project using Makefile:**
+   ```bash
+   make
+   ```
+   This creates an executable file named `meu_projeto`.
 
-2.  **Compile the project using Makefile:**
-    ```bash
-    make
-    ```
-    This will create an executable file named `meu_projeto` (or `circuito_sim` if you change the `TARGET` in the Makefile).
+3. **Run the executable:**
+   ```bash
+   ./meu_projeto
+   ```
 
-3.  **Run the executable:**
-    ```bash
-    ./meu_projeto
-    ```
+4. **Clean compiled files (optional):**
+   ```bash
+   make clean
+   ```
 
-4.  **Clean compiled files (optional):**
-    To remove object files and the executable:
-    ```bash
-    make clean
-    ```
+---
 
-### Makefile Content
+## 🧠 Skills & Industry Relevance
 
-To ensure successful compilation, make sure a file named `Makefile` (no extension) exists in the root of your project directory with the following content:
+This project demonstrates a strong alignment between **engineering problem-solving** and **software design best practices**, crucial for internships in **telecom**, **embedded systems**, and **signal processing** — such as those at Ericsson:
 
-```makefile
-CXX = g++
-CXXFLAGS = -std=c++11 -Wall
-TARGET = meu_projeto
-SRCS = $(wildcard *.cpp)
-OBJS = $(SRCS:.cpp=.o)
+- **Advanced OOP Design:** Implemented abstract and polymorphic hierarchies to simulate real-world electronics with precision.
+- **Modular Architecture:** Created a system of independent, testable components (e.g., `Amplificador`, `Integrador`) for flexibility and scalability.
+- **Engineering Abstraction:** Translated signal flow and analog circuit theory into C++ object structures and data pipelines.
+- **CLI and I/O Management:** Designed a simple terminal UI to simulate configuration inputs and visualize signal output.
+- **Persistence and Serialization:** Built `PersistenciaDeModulo` to store and reload module configurations via files.
+- **Git and Workflow Discipline:** Maintained a clean commit history and structured project repository.
+- **Time and Pressure Management:** Delivered the project within **one week**, under the pressure of overlapping exams and course deadlines.
+- **Attention to Detail:** Used flags like `-Wall` and careful type safety to reduce bugs and enforce coding discipline.
 
-all: $(TARGET)
+---
 
-$(TARGET): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $(TARGET)
+## 💡 Future Enhancements
 
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+* **Graphical User Interface (GUI):** Add a visual editor for creating and connecting modules.
+* **Advanced Components:** Add filters, oscillators, and configurable logic modules.
+* **Error Handling:** Improve handling of invalid user inputs or circuit topologies.
+* **Performance Tuning:** Optimize performance for larger and more complex circuits.
+* **Unit Testing:** Introduce a unit test suite for module verification.
+* **Config Files:** Replace hardcoded configurations with external files in JSON or XML.
 
-clean:
-	rm -f $(OBJS) $(TARGET)
+---
+
+## 🔗 Repository
+
+GitHub: [https://github.com/ellostu/cpp-oop-circuit-simulator](https://github.com/ellostu/cpp-oop-circuit-simulator)
+
+Feel free to explore the code and reach out with feedback or suggestions!
+
+---
