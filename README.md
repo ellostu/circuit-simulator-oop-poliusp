@@ -35,6 +35,52 @@ This project highlights a practical application of theoretical concepts in softw
 
 ---
 
-## 📂 Project Structure
+---
 
-The project is organized into `.cpp` (source) and `.h` (header) files for each class, alongside `main.cpp` for the program entry point and `menu.cpp` for the user interface logic.
+## ⚙️ How to Compile and Run
+
+To compile this project, navigate to the `Ep2` directory in your terminal and use the provided `Makefile`.
+
+1.  **Navigate to the project directory:**
+    ```bash
+    cd Ep2
+    ```
+
+2.  **Compile the project using Makefile:**
+    ```bash
+    make
+    ```
+    This will create an executable file named `meu_projeto` (or `circuito_sim` if you change the `TARGET` in the Makefile).
+
+3.  **Run the executable:**
+    ```bash
+    ./meu_projeto
+    ```
+
+4.  **Clean compiled files (optional):**
+    To remove object files and the executable:
+    ```bash
+    make clean
+    ```
+
+### Makefile Content
+
+To ensure successful compilation, make sure a file named `Makefile` (no extension) exists in the root of your project directory with the following content:
+
+```makefile
+CXX = g++
+CXXFLAGS = -std=c++11 -Wall
+TARGET = meu_projeto
+SRCS = $(wildcard *.cpp)
+OBJS = $(SRCS:.cpp=.o)
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(TARGET)
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(OBJS) $(TARGET)
