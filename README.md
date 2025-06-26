@@ -39,11 +39,11 @@ This project highlights a practical application of theoretical concepts in softw
 
 ## ⚙️ How to Compile and Run
 
-To compile this project, navigate to the `Ep2` directory in your terminal and use the provided `Makefile`.
+To compile this project, navigate to the `cpp-oop-circuit-simulator` directory in your terminal and use the provided `Makefile`.
 
 1.  **Navigate to the project directory:**
     ```bash
-    cd Ep2
+    cd cpp-oop-circuit-simulator
     ```
 
 2.  **Compile the project using Makefile:**
