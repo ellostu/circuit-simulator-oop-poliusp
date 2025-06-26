@@ -1,0 +1,10 @@
+meu_projeto
+
+*.o
+
+
+*.swp
+*~
+.vscode/
+.idea/
+build/
