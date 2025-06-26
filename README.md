@@ -74,7 +74,7 @@ The project bridges theoretical knowledge in Electrical Engineering and practica
 
 1. **Navigate to the project directory:**
    ```bash
-   cd Ep2
+   cd circuit-simulator-oop-poliusp
    ```
 
 2. **Compile the project using Makefile:**
