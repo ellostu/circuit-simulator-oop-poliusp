@@ -2,7 +2,8 @@
 
 > 📘 **Academic Project – C++ Circuit Simulator | Poli-USP, 2023**  
 > Developed as part of the Object-Oriented Programming (OOP) course in Electrical Engineering at the Polytechnic School of the University of São Paulo (Poli-USP).  
-> Demonstrates strong software architecture, modular C++ design, and abstraction of engineering problems — aligned with expectations for internships in software development, signal processing, and telecommunications.
+> Demonstrates strong software architecture, modular C++ design, and abstraction of engineering problems — aligned with expectations for internships in software development, signal processing, and telecommunications.  
+> 🏆 **Project awarded the maximum grade** in a highly competitive academic setting.
 
 ---
 
@@ -105,7 +106,7 @@ This project demonstrates a strong alignment between **engineering problem-solvi
 - **CLI and I/O Management:** Designed a simple terminal UI to simulate configuration inputs and visualize signal output.
 - **Persistence and Serialization:** Built `PersistenciaDeModulo` to store and reload module configurations via files.
 - **Git and Workflow Discipline:** Maintained a clean commit history and structured project repository.
-- **Time and Pressure Management:** Delivered the project within **one week**, under the pressure of overlapping exams and course deadlines.
+- **Time and Pressure Management:** Delivered the project within **one week**, during a demanding exam period — and received **maximum grade** for technical quality and completeness.
 - **Attention to Detail:** Used flags like `-Wall` and careful type safety to reduce bugs and enforce coding discipline.
 
 ---
