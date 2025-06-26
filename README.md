@@ -35,8 +35,6 @@ This project highlights a practical application of theoretical concepts in softw
 
 ---
 
----
-
 ## ⚙️ How to Compile and Run
 
 To compile this project, navigate to the `cpp-oop-circuit-simulator` directory in your terminal and use the provided `Makefile`.
